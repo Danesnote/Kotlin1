@@ -18,6 +18,8 @@ interface TodoDao {
 
     @Query("select * from todoTable")
     fun list(): LiveData<MutableList<Todo>>
+    //LiveData는 추가,수정,삭제에 의해 변화하는 값에 대해 즉시 반영
+
 
     @Query("select * from todoTable where id = (:id)")
     fun selectOne(id: Long): Todo

@@ -1,4 +1,4 @@
-package com.app.myapp1.repository;
+package com.app.myapp1.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
@@ -10,6 +10,7 @@ import java.lang.IllegalStateException
 private const val DATABASE_NAME = "todo-database.db"
 class TodoRepository private constructor(context: Context){
 
+    //데이터베이스 빌드
     private val database: TodoDatabase = Room.databaseBuilder(
             context.applicationContext,
             TodoDatabase::class.java,
